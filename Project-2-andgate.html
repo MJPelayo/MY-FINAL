@@ -28,30 +28,21 @@
     <div class="card">
       <h2 style=" color: black;">And-Gate</h2>
       <h5></h5>
-      <script src = "Java/script.js"></script>
-<script> 
-
-</script>
-
-<td><img id="andGate" src="Project/2and2off.PNG" style="width:400xp">
-
-
-<table style="width:100xp">
-
-  <tr>
-    <td>
-	<img src="IMG/button-off-xxl.png"  id="toggleImage" onclick="toggleImage(); toggleInputOne();"/>
-
-    <img src="IMG/button-off-xxl.png"  id="toggleImage2" onclick="toggleImage2(); toggleInputTwo();"/> 
-</td>
+      
+    <center>
+      <div class="col-md-6" id="imagesection">
+    <img id="myimage" src="Project/2and2off.png"  alt="noton" width="600xp" height="300xp" align="center">
+	</div>
+	<div class="btn-group-vertical">
+	
+    <p><button style="width: 100px; height: 40px;" onclick="document.getElementById('myimage').src='Project/2and2on.png'">1 1</button></p>
+    <p><button style="width: 100px; height: 40px;" onclick="document.getElementById('myimage').src='Project/2andonoff.png'">1 0</button></p>
+    <p><button style="width: 100px; height: 40px;" onclick="document.getElementById('myimage').src='Project/2andoffon.png'">0 1</button></p>
+    <p><button style="width: 100px; height: 40px;" onclick="document.getElementById('myimage').src='Project/2and2off.png'">0 0</button></p>
     
-  </tr>
-<button class="button" onclick = "and()">Run</button>
-
-</table>
-
-    </div>
-    
+  </div>
+  </center>
+  </div>
   </div>
   <div class="rightcolumn">
     
