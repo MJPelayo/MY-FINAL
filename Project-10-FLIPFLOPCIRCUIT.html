@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Fundamentals of Computing</title>
+<link rel="stylesheet" type="text/css" href="Mystyle.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+img {
+  float: left;
+ padding-right: 40px; 
+ padding-left: 40px;
+ padding-bottom: 40px;
+ 
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+ <h1>Fundamentals of Computing</h1>
+  
+  
+</div>
+
+<div class="topnav">
+ <a href="2Project.html" style="float:right">BACK</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div>
+      <h2 style=" color: black;">FLIP FLOP CIRCUIT</h2>
+      <h5></h5>
+      
+	 
+<hr>	
+
+
+ <img id="image" src="Project/10-ffoffoffoff.png" alt="" style="width:800px;height:600px;"> 
+        
+			
+
+<p></p>
+<p></p>         
+<div class="card">
+<div class="fakeimg">
+<div class="button-group">
+	<p style=" color:black; font-family:Times New Roman, Times, serif; font-size: 20px; ">Select input combinations</p>	
+
+            <h5>Input A</h5>
+            
+              <button type="button" class="btn btn-secondary" onclick="offonoff();">turn off (0)</button>
+              <button type="button" class="btn btn-secondary" onclick="ononoff();">turn on (1)</button>
+            
+            <h5>Input B</h5>
+            
+              <button type="button" class="btn btn-secondary" onclick="offoffoff();">turn off (0)</button>
+              <button type="button" class="btn btn-secondary" onclick="offoffon();">turn on (1)</button>
+</div>
+           </div>
+		    </div>
+<script>
+function offoffoff(){
+  document.getElementById('image').src = "Project/10-ffoffoffoff.png";
+}
+function offonoff(){
+  document.getElementById('image').src = "Project/10-ffoffonoff.png";
+}
+function offoffon(){
+  document.getElementById('image').src = "Project/10-ffoffoffon.png";
+}
+function ononoff(){
+  document.getElementById('image').src = "Project/10-ffononoff.png";
+}
+</script>
+
+
+
+</section>
+
+
+    
+  </div>
+
+    
+	
+  </div>
+  
+  </div>
+
+  <script src="./main.js"></script>
+    
+  </div>
+
+  <div class="footer">
+  <b><p style="color:#626B75;">@Powered by UB</p></b>
+</div>
+
+</body>
+</html>

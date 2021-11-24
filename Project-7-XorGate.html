@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Fundamentals of Computing</title>
+<link rel="stylesheet" type="text/css" href="Mystyle.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<center>
+<section>
+
+<div class="topnav">
+  
+  <a href="2Project.html" style="float:right; color:white; font-family:Times New Roman, Times, serif; font-size: 28px; ">BACK</a>
+</div>
+
+<h2>Xor Gate</h2>
+
+
+<div class="row">
+ 
+ 
+ <div class="container">
+        <div id="mainsection" class="row d-flex flex-wrap flex-row justify-content-center align-items-center">
+          <div class="col-md-6 mb-4" id="textsection">
+            <h3 class="mb-3">Select input combinations</h3>
+            <div class="btn-group-vertical">
+              <button type="button" class="btn btn-secondary" onclick="onoff();">1 and 0</button>
+              <button type="button" class="btn btn-secondary" onclick="offon();">0 and 1</button>
+              <button type="button" class="btn btn-secondary" onclick="onon();">1 and 1</button>
+              <button type="button" class="btn btn-secondary" onclick="offoff();">0 and 0</button>
+            </div>
+          </div>
+          <div class="col-md-6" id="imagesection">
+            <img id="image" src="project/7-xoronoff.png" alt="" style="width:500px;height:200px;">
+          </div>
+        </div>
+        <div class="text-center">
+          <p>a digital logic gate that gives a true output when the number of true inputs is odd. An XOR gate implements an exclusive or from mathematical logic; that is, a true output results if one, and only one, of the inputs to the gate is true. If both inputs are false or both are true, a false output results</p>
+        </div>
+      </div>
+ 
+</div>
+
+</section>
+</center>
+
+<script>
+function onoff(){
+  document.getElementById('image').src = 'project/7-xoronoff.png';
+}
+function offon(){
+  document.getElementById('image').src = 'project/7-xoroffon.png';
+}
+function offoff(){
+  document.getElementById('image').src = 'project/7-xoroffoff.png';
+}
+function onon(){
+  document.getElementById('image').src = 'project/7-xoronon.png';
+}
+</script>
+
+<div class="footer">
+  <b><p style="color:#626B75;">@Powered by UB</p></b>
+</div>
+
+</body>
+</html>

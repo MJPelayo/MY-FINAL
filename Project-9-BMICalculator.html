@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Fundamentals of Computing</title>
+<link rel="stylesheet" type="text/css" href="Mystyle.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<center>
+<section>
+<div class="header">
+ <h1>Fundamentals of Computing</h1>
+  
+  
+</div>
+<div class="topnav">
+  
+  <a href="2Project.html" style="float:right; color:white; font-family:Times New Roman, Times, serif; font-size: 28px; ">BACK</a>
+</div>
+
+<h2> BMI Calculator</h2>
+
+
+<div class="row">
+<center>
+ <div class="card">
+ 
+      <div class="container">
+        <div class="mytabs">
+          <input type="radio" id="tabStandard" name="mytabs" checked="checked">
+          <label for="tabStandard" class="tabLabel">Standard</label>
+          <div class="tab">
+            <div class="row d-flex  flex-wrap flex-row justify-content-start">
+              <div class="col-md-4">
+                <form onsubmit="return validateForm1();" name="form1">
+                  <label for="feet">Enter your height: </label>
+                  <input type="number" id="feet" placeholder="feet" class="form-control">
+                  <input type="number" id="inches" placeholder="inches" class="form-control">
+                  <br>
+                  <label for="weight">Enter your weight:</label>
+                  <input type="number" id="weightLBS" placeholder="pounds" class="form-control">
+                  <button type="submit" class="btn btn-primary" id="calculateStandard">Calculate</button>
+                </form>
+              </div>
+			  
+			  
+              <div class="col-md-7 p-3">
+                <div>
+				
+				<div class="fakeimg">
+			  
+                  <h3 id="info1" class="mb-4">How is BMI used?</h3>
+                  <p id="output1">BMI can be a screening tool, but it does not diagnose the body fatness or health of an
+                    individual. To
+                    determine if BMI
+                    is a health risk, a healthcare provider performs further assessments. Such assessments include
+                    skinfold thickness
+                    measurements, evaluations of diet, physical activity, and family history10.</p>
+                  <h3>Instructions</h3>
+                  <p>Enter your appropriate height(in feet and or inches) and your appropriate weight. Then click the
+                    Calculate
+                    button to compute your BMI.</p>
+                  <p>Learn more about BMIs by clicking <a
+                      href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html"
+                      target="_blank">here.</a></p>
+                </div>
+				</div>
+              </div>
+			  
+			 
+			  
+            </div>
+          </div>
+
+</div>
+<div class="card">
+          <input type="radio" id="tabMetric" name="mytabs">
+          <label for="tabMetric" class="tabLabel">Metric</label>
+          <div class="tab">
+            <div class="row d-flex  flex-wrap flex-row justify-content-start">
+              <div class="col-md-4">
+                <form onsubmit="return validateForm2()" name="form2">
+                  <label for="meters">Enter your height: </label>
+                  <input type="number" name="meters" id="meters" placeholder="meters" class="form-control">
+                  <input type="number" name="cm" id="cm" placeholder="centimeters" class="form-control">
+                  <br>
+                  <label for="kg">Enter your weight:</label>
+                  <input type="text" name="kg" id="weightKG" placeholder="kilograms" class="form-control">
+                  <button type="submit" class="btn btn-primary" id="calculateMetric">Calculate</button>
+                </form>
+              </div>
+              <div class="col-md-7 p-3">
+                <div>
+				<div class="fakeimg">
+                  <h3 id="info2" class="mb-4">How is BMI used?</h3>
+                  <p id="output2">BMI can be a screening tool, but it does not diagnose the body fatness or health of an
+                    individual.
+                    To determine if BMI is a health risk, a healthcare provider performs further assessments. Such
+                    assessments include skinfold thickness measurements, evaluations of diet, physical activity, and
+                    family history.</p>
+                  <h3>Instructions</h3>
+                  <p>Enter your appropriate height(in meters and or centimeters) and your appropriate weight. Then click
+                    the Calculate button to compute your BMI.</p>
+                  <p>Learn more about BMIs by clicking <a
+                      href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html"
+                      target="_blank">here.</a></p>
+					  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+</div>
+</center>
+</section>
+</center>
+<script>
+function infoMetric() {
+  alert(
+    "Kindly note that you are using the metric system(centimeters and meters), as well as kilograms."
+  );
+}
+document.getElementById("tabMetric").addEventListener("click", infoMetric);
+
+function infoStandard() {
+  alert(
+    "Kindly note that you are using the imperial system(feet and inches), as well as pounds."
+  );
+}
+document.getElementById("tabStandard").addEventListener("click", infoStandard);
+
+function validateForm1() {
+  let feet = document.getElementById("feet").value;
+  let inches = document.getElementById("inches").value;
+  let weight = document.getElementById("weightLBS").value;
+  if (feet == "" || inches == "" || weight == "") {
+    document.getElementById("info1").innerHTML = "Fill in all fields";
+    document.getElementById("info1").style.color = "red";
+    document.getElementById("info1").style.fontfamily = "Arial, Helvetica, sans-serif";
+    document.getElementById("calculateStandard").innerText = "Calculate";
+    document.getElementById("output1").innerHTML = "You are trying to submit an incomplete form. Kindly enter the required fields to be able to get your accurate BMI.";
+    return false;
+  } else {
+    feet = parseInt(feet, 10);
+    inches = parseInt(inches, 10);
+    weight = parseInt(weight, 10);
+
+    let height = feet * 12 + inches;
+    let bmi = (weight / height ** 2) * 703;
+    // bmi = Math.round(bmi);
+    bmi = bmi.toFixed(2);
+
+    document.getElementById("info1").innerHTML = "Your BMI has been computed successfully";
+    document.getElementById("info1").style.color = "green";
+    document.getElementById("info1").style.fontfamily = "Arial, Helvetica, sans-serif";
+    document.getElementById("calculateStandard").innerText = "SUCCESS";
+    
+    if (bmi < 18.5) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output1").innerHTML = bmi + " This means that you are underweight";
+      return false;
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output1").innerHTML = bmi + " This means that you are at  a healthy weight.";
+      return false;
+    } else if (bmi >= 25.0 && bmi <= 29.9) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output1").innerHTML = bmi + " Be wary of your condition. This means that you are overweight.";
+      return false;
+    } else if (bmi > 30.0) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output1").innerHTML = bmi + " This means that you are obese. Be cautious about the health implications of being obese.";
+      return false;
+    }
+
+    document.getElementById("output1").innerHTML = bmi;
+    return false;
+  }
+}
+
+function validateForm2() {
+  let meters = document.getElementById("meters").value;
+  let cm = document.getElementById("cm").value;
+  let weight = document.getElementById("weightKG").value;
+  if (meters == "" || cm == "" || weight == "") {
+    document.getElementById("info2").innerHTML = "Fill in all fields";
+    document.getElementById("info2").style.color = "red";
+    document.getElementById("info2").style.fontfamily = "Arial, Helvetica, sans-serif";
+    document.getElementById("calculateMetric").innerText = "Calculate";
+    document.getElementById("output2").innerHTML = "You are trying to submit an incomplete form. Kindly enter the required fields to be able to get your accurate BMI.";
+    return false;
+  } else {
+    meters = parseInt(meters, 10);
+    cm = parseInt(cm, 10);
+    weight = parseInt(weight, 10);
+
+    let height = meters + (cm / 100);
+    let bmi = (weight / (height ** 2));
+    // bmi = Math.round(bmi);
+    bmi = bmi.toFixed(2);
+
+    document.getElementById("info2").innerHTML = "Your BMI has been computed successfully";
+    document.getElementById("info2").style.color = "green";
+    document.getElementById("info2").style.fontfamily = "Arial, Helvetica, sans-serif";
+    document.getElementById("calculateMetric").innerText = "SUCCESS";
+    
+    if (bmi < 18.5) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output2").innerHTML = bmi + " This means that you are underweight.";
+      return false;
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output2").innerHTML = bmi + " This means that you are at a healthy weight.";
+      return false;
+    } else if (bmi >= 25.0 && bmi <= 29.9) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output2").innerHTML = bmi + " Be wary of your condition. This means that you are overweight.";
+      return false;
+    } else if (bmi > 30.0) {
+      bmi = "Your BMI is " + bmi + ".";
+      document.getElementById("output2").innerHTML = bmi + " This means that you are obese. Be cautious about the health implications of being obese.";
+      return false;
+    }
+
+    document.getElementById("output2").innerHTML = bmi;
+    return false;
+  }
+}
+
+</script>
+    </form>
+  </div>
+  </div>
+
+  <script src="./main.js"></script>
+    
+  </div>
+
+  <div class="footer">
+  <b><p style="color:#626B75;">@Powered by UB</p></b>
+</div>
+
+</body>
+</html>
